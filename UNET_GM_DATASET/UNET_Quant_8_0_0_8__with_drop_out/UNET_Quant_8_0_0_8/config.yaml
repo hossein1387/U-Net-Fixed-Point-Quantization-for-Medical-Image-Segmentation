@@ -1,0 +1,17 @@
+UNET:
+    dataset: 'gmchallenge'
+    lr: 0.001
+    num_epochs: 200
+    model_type: "unet"
+    init_type: glorot
+    quantization: "FIXED" # "INT", "BNN", "Normal", "FIXED"
+    activation_f_width: 3
+    activation_i_width: 3
+    weight_f_width: 3
+    weight_i_width: 3
+    gpu_core_num: 2
+    trained_model: "/export/tmp/hemmat/results/full_precision/full_precision.pkl"
+    experiment_name: "a8_8_w8_8"
+    log_output_dir: "/export/tmp/hemmat/results/"
+    operation_mode: "visualize" # normal, visualize, retrain, inference
+    # trained_model: ""

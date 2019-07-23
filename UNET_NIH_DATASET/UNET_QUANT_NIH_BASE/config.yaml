@@ -1,0 +1,18 @@
+UNET:
+    dataset: 'nih'
+    lr: 0.001
+    num_epochs: 200
+    model_type: "unet"
+    init_type: glorot
+    quantization: "FIXED" # "INT", "BNN", "Normal", "FIXED", "XNOR"
+    activation_f_width: 1
+    activation_i_width: 5
+    weight_f_width: 3
+    weight_i_width: 0
+    gpu_core_num: 1
+    dropout: "enable" # disable
+    trained_model: "/export/tmp/hemmat/results/a5_1_w0_3/a5_1_w0_3.pkl"
+    experiment_name: "a5_1_w0_3"
+    log_output_dir: "/export/tmp/hemmat/results/"
+    operation_mode: "visualize" # normal, visualize, retrain, inference
+    # trained_model: ""

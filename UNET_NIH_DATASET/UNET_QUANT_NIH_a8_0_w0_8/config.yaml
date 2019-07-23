@@ -1,0 +1,19 @@
+UNET:
+    dataset: 'nih'
+    lr: 0.001
+    num_epochs: 200
+    model_type: "unet"
+    init_type: glorot
+    quantization: "FIXED" # "INT", "BNN", "Normal", "FIXED" 
+    activation_f_width: 0 
+    activation_i_width: 8 
+    weight_f_width: 8 
+    weight_i_width: 0     
+    gpu_core_num: 2
+    dropout: "enable" # disable
+    activation: "relu"
+    trained_model: "/export/tmp/hemmat/results/nih_a8_0_w0_8/nih_a8_0_w0_8.pkl"
+    experiment_name: "nih_a8_0_w0_8"
+    log_output_dir: "/export/tmp/hemmat/results/"
+    operation_mode: "normal" # normal, visualize, retrain, inference
+    # trained_model: ""

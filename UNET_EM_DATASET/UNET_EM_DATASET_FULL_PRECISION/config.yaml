@@ -1,0 +1,13 @@
+UNET:
+    dataset: 'em_challenge'
+    lr: 0.001
+    num_epochs: 200
+    model_type: "unet"
+    init_type: glorot
+    quantization: "Normal" # "INT", "BNN", "Normal", "FIXED"
+    gpu_core_num: 1
+    activation: 'tanh'
+    trained_model: "/export/tmp/hemmat/results/em_tanh_full_precision/em_tanh_full_precision.pkl"
+    experiment_name: "em_tanh_full_precision"
+    log_output_dir: "/export/tmp/hemmat/results/"
+    operation_mode: "NOrmal" # normal, visualize, retrain, inference

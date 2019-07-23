@@ -1,0 +1,15 @@
+UNET:
+    dataset: 'nih'
+    lr: 0.001
+    num_epochs: 200
+    model_type: "unet"
+    init_type: glorot
+    quantization: "Normal" # "INT", "BNN", "Normal", "FIXED", "XNOR"
+    gpu_core_num: 2
+    dropout: "enable" # disable
+    activation: "relu"
+    trained_model: "/export/tmp/hemmat/results/nih_fullprecision/nih_fullprecision.pkl"
+    experiment_name: "nih_fullprecision"
+    log_output_dir: "/export/tmp/hemmat/results/"
+    operation_mode: "normal" # normal, visualize, retrain, inference
+    # trained_model: ""

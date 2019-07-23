@@ -1,0 +1,13 @@
+UNET:
+    dataset: 'emchallenge'
+    lr: 0.001
+    num_epochs: 200
+    model_type: "unet"
+    init_type: glorot
+    quantization: "Ternary" # "INT", "BNN", "Normal", "FIXED", "Ternary"
+    gpu_core_num: 1
+    activation: "ternarytanh" #relu
+    trained_model: "/export/tmp/hemmat/results/em_ternary/em_ternary.pkl"
+    experiment_name: "em_ternary"
+    log_output_dir: "/export/tmp/hemmat/results/"
+    operation_mode: "normal" # normal, visualize, retrain, inference

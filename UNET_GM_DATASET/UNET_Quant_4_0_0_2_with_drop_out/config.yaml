@@ -1,0 +1,18 @@
+UNET:
+    dataset: 'gmchallenge'
+    lr: 0.0001
+    num_epochs: 200
+    model_type: "unet"
+    init_type: glorot
+    quantization: "Fixed" # "INT", "BNN", "Normal"
+    activation_f_width: 0
+    activation_i_width: 4
+    weight_f_width: 2
+    weight_i_width: 0
+    gpu_core_num: 0
+    dropout: "enable" # disable
+    trained_model: "/export/tmp/hemmat/results/full_precision/full_precision.pkl"
+    experiment_name: "a4_0_w0_2_with_dropout"
+    log_output_dir: "/export/tmp/hemmat/results/"
+    operation_mode: "normal"
+    # trained_model: ""

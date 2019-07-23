@@ -1,0 +1,13 @@
+UNET:
+    dataset: 'emchallenge'
+    lr: 0.001
+    num_epochs: 200
+    model_type: "unet"
+    init_type: glorot
+    quantization: "BNN" # "INT", "BNN", "Normal", "FIXED"
+    gpu_core_num: 2
+    activation: 'relu'
+    trained_model: "/export/tmp/hemmat/results/em_bnn/em_bnn.pkl"
+    experiment_name: "em_bnn"
+    log_output_dir: "/export/tmp/hemmat/results/"
+    operation_mode: "normal" # normal, visualize, retrain, inference

@@ -1,0 +1,19 @@
+UNET:
+    dataset: 'gmchallenge'
+    lr: 0.001
+    num_epochs: 200
+    model_type: "unet"
+    init_type: glorot
+    quantization: "FIXED" # "INT", "BNN", "Normal", "FIXED"
+    activation_f_width: 0
+    activation_i_width: 8
+    weight_f_width: 8
+    weight_i_width: 0
+    dropout: "false"
+    activation: "tanh"
+    gpu_core_num: 1
+    trained_model: "/export/tmp/hemmat/results/gm_tanh_a8_0_w0_8/gm_tanh_a8_0_w0_8.pkl"
+    experiment_name: "gm_tanh_a8_0_w0_8"
+    log_output_dir: "/export/tmp/hemmat/results/"
+    operation_mode: "normal" # normal, visualize, retrain, inference
+    # trained_model: ""
