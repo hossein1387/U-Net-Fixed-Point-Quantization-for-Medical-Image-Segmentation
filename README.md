@@ -8,4 +8,24 @@ For each dataset, we used a preprocessing script that can be found in ***. Pleas
 
 ## Running code:
 
-Every dataset contains a main directory called ***_BASE. This directory contains the original code for that dataset. The files found in folders in the dataset directory are symbolically linked to the files in BASE directory except the config file. The configuration file is a YAML file that shows what configuration is used for this specific experiment
+Every dataset contains a main directory called ***_BASE. This directory contains the original code for that dataset. The files found in folders in the dataset directory are symbolically linked to the files in BASE directory except the config file. The configuration file is a YAML file that shows what configuration is used for this specific experiment. For instance, for EM dataset, to run an experiment with a specific integer quantization precision (lets try Q4.4 bit for weight and Q4.4 bit for activation), you first need to modify the configuration as follow:
+
+```yaml
+
+UNET:
+    dataset: 'emdataset'
+    lr: 0.001
+    num_epochs: 200
+    model_type: "unet"
+    init_type: glorot
+    quantization: "FIXED"
+    activation_f_width: 4
+    activation_i_width: 4
+    weight_f_width: 4
+    weight_i_width: 4
+    gpu_core_num: 1
+    trained_model: "/path/to/trained/models/em_a4_4_w4_4.pkl"
+    experiment_name: "em_a4_4_w4_4"
+    log_output_dir: "/path/to/output/folder"
+    operation_mode: "normal"
+```
