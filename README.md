@@ -5,7 +5,7 @@ This repository contains code for "Fixed-Point U-Net Quantization for Medical Im
 ## Data preprocessing:
 
 For each dataset, we used a preprocessing script that can be found in . Please follow instructions for each dataset.
-You can also download the pre-processed data from [this link]{https://drive.google.com/file/d/1kjc3HLVuGdMa9wBF1SHaNicH9Y-maDzZ/view?usp=sharing}
+You can also download the pre-processed data from [this link](https://drive.google.com/file/d/1kjc3HLVuGdMa9wBF1SHaNicH9Y-maDzZ/view?usp=sharing)
 
 ## Running code:
 
