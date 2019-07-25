@@ -1,4 +1,7 @@
+<center>
 # Fixed Point U-Net Quantization For Medical Image Segmentation
+</center>
+
 This repository contains code for "Fixed-Point U-Net Quantization for Medical Image Segmentation" paper to be appeared at MICCAI2019. It contains our experiments on three different datasets namely: [The Spinal Cord Gray Matter Segmentation (GM)](https://www.sciencedirect.com/science/article/pii/S1053811917302185), [The ISBI challenge for segmentation of neuronal structures in Electron Microscopic (EM)](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1000502) and [The public National Institute of Health (NIH) dataset for pancreas segmentation in abdominal CT scans](https://wiki.cancerimagingarchive.net/display/Public/Pancreas-CT).
 
 
