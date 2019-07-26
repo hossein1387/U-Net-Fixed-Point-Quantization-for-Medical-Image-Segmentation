@@ -13,7 +13,7 @@ This repository contains code for "Fixed-Point U-Net Quantization for Medical Im
 For each dataset, we used a preprocessing script that can be found in . Please follow instructions for each dataset.
 You can also download the pre-processed data from [this link](https://drive.google.com/file/d/1kjc3HLVuGdMa9wBF1SHaNicH9Y-maDzZ/view?usp=sharing).
 
-## Running code:
+## Configuring the Model using config.yaml:
 
 Every dataset contains a main directory called \*\*\*\_BASE. This directory contains the original code for that dataset. The files found in folders in the dataset directory are symbolically linked to the files in BASE directory except the config file. The configuration file is a YAML file that shows what configuration is used for this specific experiment. For instance, for EM dataset, to run an experiment with a specific integer quantization precision (lets try Q4.4 bit for weight and Q4.4 bit for activation), you first need to modify the configuration as follow:
 
@@ -40,12 +40,12 @@ UNET:
 All datasets use the same configuration format. The following are most of the configuration that can be used:
 
 * Currently we only have tested our quantizer on UNET architecture hence, the first line must be `UNET` and it must be passed as argument to the main script.
-* `dataset`: defines the dataset name. It can be named anything. The scripts use this string for outputting readable information. 
-* `lr`: shows an initial learning rate. We use Annealing Cosine scheduler for reducing the learning rate. 
-* `num_epochs`: defines how many epochs you wish to run your model.
-* `model_type`: is a string that shows what model we use, currently, the only option is `unet`. 
-* `init_type`: is the initialization function that is used for initializing parameters. Currently the only option is `glorot`.
-* `quantization`: defines what type of quantization you want to use. You can choose: 
+* `dataset`: Defines the dataset name. It can be named anything. The scripts use this string for outputting readable information. 
+* `lr`: Shows an initial learning rate. We use Annealing Cosine scheduler for reducing the learning rate. 
+* `num_epochs`: Defines how many epochs you wish to run your model.
+* `model_type`: Is a string that shows what model we use, currently, the only option is `unet`. 
+* `init_type`: Is the initialization function that is used for initializing parameters. Currently the only option is `glorot`.
+* `quantization`: Defines what type of quantization you want to use. You can choose: 
     * `INT`: Integer quantization
     * `BNN`: Binary quantization
     * `Normal`: No quantization
@@ -62,6 +62,8 @@ All datasets use the same configuration format. The following are most of the co
     * `visualize`: `trained_model` will be used top plot weight distribution of every layer.
     * `retrain`:  `trained_model` will be used as the initial state for training. 
     * `inference`: `trained_model` will be used to run one batch of data and the accuracy will be printed out.
+
+## Running code:
 
 After the configurations are set properly, you can run the following command to start the requested opration (the following shows command
 to run an em dataset experiment):
