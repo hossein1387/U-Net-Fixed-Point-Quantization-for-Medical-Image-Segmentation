@@ -53,8 +53,18 @@ All datasets use the same configuration format. The following are most of the co
     * `Ternary`: Ternary Quantization
 * `activation_[f-i]_width`: is used to define how many bits you want to use for quantizing the floating (`f`) or integer (`i`) part of the activation values. This option is used only for `INT` and `FIXED` quantization types.
 * `weight_[f-i]_width`: is used to define how many bits you want to use for quantizing the floating (`f`) or integer (`i`) part of the parameter values. This option is used only for `INT` and `FIXED` quantization types.
-`gpu_core_num`: Defines which gpu core you want to run your model. Parallel computing (multiple gpus) is not supported for the moment.
-`trained_model`: "/path/to/trained/models/em_a4_4_w4_4.pkl"
-`experiment_name`: "em_a4_4_w4_4"
-`log_output_dir`: "/path/to/output/folder"
-`operation_mode`: "normal"
+* `gpu_core_num`: Defines which gpu core you want to run your model. Parallel computing (multiple gpus) is not supported for the moment.
+* `trained_model`: Path to save best model while training.
+* `experiment_name`: A name for the experiment
+* `log_output_dir`: Path to output log.
+* `operation_mode`: Can be any of the following:
+    * `normal`: the model will be put into training.
+    * `visualize`: `trained_model` will be used top plot weight distribution of every layer.
+    * `retrain`:  `trained_model` will be used as the initial state for training. 
+    * `inference`: `trained_model` will be used to run one batch of data and the accuracy will be printed out.
+
+After the configurations are set properly, you can run the following command to start the requested opration (the following shows command
+to run an em dataset experiment):
+
+`python em_unet.py -f config.yaml -t UNET`
+
