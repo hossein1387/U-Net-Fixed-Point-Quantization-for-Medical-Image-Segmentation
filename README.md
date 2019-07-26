@@ -1,4 +1,6 @@
-![alt text](https://github.com/hossein1387/Fixed-Point-U-Net-Quantization-for-Medical-Image-Segmentation/blob/master/Figs/em_6004.png)
+![alt text](https://github.com/hossein1387/Fixed-Point-U-Net-Quantization-for-Medical-Image-Segmentation/blob/master/Figs/nih.png)
+![alt text](https://github.com/hossein1387/Fixed-Point-U-Net-Quantization-for-Medical-Image-Segmentation/blob/master/Figs/em.png)
+![alt text](https://github.com/hossein1387/Fixed-Point-U-Net-Quantization-for-Medical-Image-Segmentation/blob/master/Figs/gm.png)
 
 
 # Fixed Point U-Net Quantization For Medical Image Segmentation
