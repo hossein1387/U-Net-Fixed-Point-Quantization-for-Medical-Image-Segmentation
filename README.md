@@ -49,7 +49,7 @@ All datasets use the same configuration format. The following are most of the co
     * `INT`: Integer quantization
     * `BNN`: Binary quantization
     * `Normal`: No quantization
-    * `FIXED`: Fized point quantization
+    * `FIXED`: Fixed point quantization
     * `Ternary`: Ternary Quantization
 * `activation_[f-i]_width`: is used to define how many bits you want to use for quantizing the floating (`f`) or integer (`i`) part of the activation values. This option is used only for `INT` and `FIXED` quantization types.
 * `weight_[f-i]_width`: is used to define how many bits you want to use for quantizing the floating (`f`) or integer (`i`) part of the parameter values. This option is used only for `INT` and `FIXED` quantization types.
