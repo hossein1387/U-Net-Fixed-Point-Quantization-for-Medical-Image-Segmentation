@@ -70,3 +70,21 @@ to run an em dataset experiment):
 
 `python em_unet.py -f config.yaml -t UNET`
 
+
+## Citation
+
+If you found our work interesting, please consider citing our paper:
+
+MohammadHossein AskariHemmat, Sina Honari, Lucas Rouhier, Christian S. Perone, Julien Cohen-Adad, Yvon Savaria, Jean-Pierre David, U-Net Fixed-Point Quantization for Medical Image Segmentation, Hardware Aware Learning for
+Medical Imaging and Computer Assisted Intervention (HAL-MICCAI), 2019. 
+
+Bibtex:
+
+    @inproceedings{askarimiccai2019,
+    title={U-Net Fixed-Point Quantization for Medical Image Segmentation
+},
+    author={AskariHemmat, MohammadHossein and Honari, Sina and Rouhier, Lucas  and S. Perone, Christian  and Cohen-Adad, Julien and Savaria, Yvon and David, Jean-Pierre},
+    booktitle={Medical Imaging and Computer Assisted Intervention (MICCAI), Hardware Aware Learning Workshop (HAL-MICCAI) 2019},
+    year={2019},
+    organization={Springer}
+    }
